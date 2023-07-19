@@ -1,0 +1,19 @@
+.Header {
+  background-image: url("../assets/mobile/bg-pattern-header.svg");
+  border: 2px solid blue;
+  height: 8.5rem;
+}
+
+@media (min-width: 376px) {
+  .Header {
+    background-image: url("../assets/tablet/bg-pattern-header.svg");
+  }
+}
+
+
+
+@media (min-width: 769px) {
+  .Header {
+    background-image: url("../assets/desktop/bg-pattern-header.svg");
+  }
+}

@@ -1,17 +1,11 @@
-import './App.css'
-import testimage from "../src/assets/mobile/bg-pattern-header.svg";
-
-
+import "./App.css";
+import Header from "./components/Header";
 
 function App() {
-
-
   return (
-    <main className='App'>
-      <h1>devjobs  </h1>
-    
-    </main>
+      <Header />
+  
   )
 }
 
-export default App
+export default App;
