@@ -5,6 +5,27 @@ import Stack from "@mui/material/Stack";
 import sunIcon from "../assets/desktop/icon-sun.svg";
 import moonIcon from "../assets/desktop/icon-moon.svg";
 
+// Theme Functions
+const setDarkMode = () => {
+  document.querySelector("body").setAttribute("data-theme", "dark");
+  localStorage.setItem("selectedTheme", "dark");
+};
+
+const setLightMode = () => {
+  document.querySelector("body").setAttribute("data-theme", "light");
+  localStorage.setItem("selectedTheme", "light");
+};
+
+const selectedTheme = localStorage.getItem("selectedTheme");
+
+if (selectedTheme === "dark") {
+  setDarkMode();
+}
+
+
+const toggleTheme = (evt) =>
+  evt.target.checked ? setDarkMode() : setLightMode();
+
 // Theme toogle switch button from material UI
 const AntSwitch = styled(Switch)(({ theme }) => ({
   width: 28,
@@ -52,7 +73,7 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
 function Navbar() {
   return (
     <nav className="navbar px-2 py-4">
-      <div className="container-fluid border border-danger">
+      <div className="container-fluid">
         <a className="navbar-brand" href="#">
           devjobs
         </a>
@@ -60,7 +81,8 @@ function Navbar() {
           <Stack direction="row" spacing={1} alignItems="center">
             <img src={sunIcon} alt="light-theme" />
             <AntSwitch
-              defaultChecked
+              onChange={toggleTheme}
+              defaultChecked={selectedTheme === "dark"}
               inputProps={{ "aria-label": "ant design" }}
             />
             <img src={moonIcon} alt="dark-theme" />

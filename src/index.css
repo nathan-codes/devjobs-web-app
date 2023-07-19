@@ -22,7 +22,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 /*
   5. Improve media defaults
@@ -66,7 +66,20 @@ h6 {
 
 /* CSS Reset End */
 
+/* Website Colors */
+:root {
+  --body_background: #f4f6f8;
+  --body_color: black;
+  --link_color: navy;
+}
 
+/* For Dark Theme */
+[data-theme="dark"] {
+  --body_background: #121721;
+  --body_color: white;
+  --link_color: cyan;
+}
 
-
-
+* {
+  transition: all 0.3s ease-in-out;
+}

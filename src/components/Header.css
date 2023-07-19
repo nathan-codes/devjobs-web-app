@@ -1,7 +1,10 @@
 .Header {
   background-image: url("../assets/mobile/bg-pattern-header.svg");
-  border: 2px solid blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 8.5rem;
+  position: relative;
 }
 
 @media (min-width: 376px) {
