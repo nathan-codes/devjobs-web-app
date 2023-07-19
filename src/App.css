@@ -1,0 +1,7 @@
+.App {
+  border: 2px solid red;
+  background-image: url("../src/assets/mobile/bg-pattern-header.svg");
+  width: 23.4375rem;
+  height: 8.5rem;
+  flex-shrink: 0;
+}
