@@ -11,29 +11,6 @@ function CardGroup() {
           <div className="col-md-6 col-lg-4 ">
             <Card />
           </div>
-          <div className="col-md-6 col-lg-4">
-            <Card />
-          </div>
-
-          <div className="col-md-6 col-lg-4">
-            <Card />
-          </div>
-          <div className="col-md-6 col-lg-4">
-            <Card />
-          </div>
-          <div className="col-md-6 col-lg-4">
-            <Card />
-          </div>
-          <div className="col-md-6 col-lg-4">
-            <Card />
-          </div>
-          <div className="col-md-6 col-lg-4">
-            <Card />
-          </div>
-          <div className="col-md-6 col-lg-4">
-            <Card />
-          </div>
-          
         </div>
       </div>
     </section>
