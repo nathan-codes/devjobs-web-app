@@ -70,18 +70,21 @@ h6 {
 :root {
   --body_background: #f4f6f8;
   --second_body_background: #fff;
-  --body_color: #6E8098;
-  --link_color: navy;
-  --button-bg-color: #5964E0;
-  --button-text-color: #FFFFFF;
+  --body_color: #6e8098;
+  --primary_color: #5964E0;
+  --button-bg-color: #5964e0;
+  --button-text-color: #ffffff;
   --text-color: black;
+  --header-color: #19202D;
+  --content-color: #6E8098;
 }
 
 /* For Dark Theme */
 [data-theme="dark"] {
   --body_background: #121721;
-  --second_body_background: #19202D;
-  --text-color:white;
+  --second_body_background: #19202d;
+  --text-color: white;
+  --header-color: white;
   --body_color: white;
   --link_color: cyan;
 }

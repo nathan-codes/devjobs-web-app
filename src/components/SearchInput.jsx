@@ -50,7 +50,7 @@ function SearchInput() {
               placeholder="Filter by title..."
             />
           </div>
-          <div className="col locationInput d-flex">
+          <div className="col locationInput d-flex justify-content-center">
             <img
               src={locationIcon}
               alt="location"
@@ -64,7 +64,7 @@ function SearchInput() {
               placeholder="Filter by location..."
             />
           </div>
-          <div className="col  d-flex  m-0">
+          <div className="col  d-flex   justify-content-center">
             <input
               type="checkbox"
               name="fulltime"

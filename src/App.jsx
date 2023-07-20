@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
+import CardGroup from "./components/CardGroup";
 
 
 
@@ -8,8 +9,8 @@ function App() {
     <>
  
       <Header />
-      
-    
+      <CardGroup />
+
   </>
     
   
