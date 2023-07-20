@@ -69,13 +69,19 @@ h6 {
 /* Website Colors */
 :root {
   --body_background: #f4f6f8;
-  --body_color: black;
+  --second_body_background: #fff;
+  --body_color: #6E8098;
   --link_color: navy;
+  --button-bg-color: #5964E0;
+  --button-text-color: #FFFFFF;
+  --text-color: black;
 }
 
 /* For Dark Theme */
 [data-theme="dark"] {
   --body_background: #121721;
+  --second_body_background: #19202D;
+  --text-color:white;
   --body_color: white;
   --link_color: cyan;
 }

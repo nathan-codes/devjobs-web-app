@@ -1,10 +1,12 @@
 import "./searchInput.css";
-import filterIcon from "../assets/mobile/icon-filter.svg";
-
+// import filterIcon from "../assets/mobile/icon-filter.svg";
+import searchIcon from "../assets/desktop/icon-search.svg";
+import locationIcon from "../assets/desktop/icon-location.svg";
+import Button from "./Button";
 
 function SearchInput() {
   return (
-   
+    <>
       <div className="inputGroup">
         <input
           type="text"
@@ -14,8 +16,14 @@ function SearchInput() {
           placeholder="Filter by title..."
         />
         <span className="searchButtons my-auto">
-          <button className="btn btn-sm me-2">
-            <img src={filterIcon} alt="filter" />
+          <button className="btn filter-button me-2">
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z"
+                fill="currentcolor"
+                fillRule="nonzero"
+              />
+            </svg>
           </button>
           <button className="btn search-button ">
             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -29,6 +37,46 @@ function SearchInput() {
         </span>
       </div>
 
+      {/* Tablet and desktop search */}
+      <div className="container text-center tablet-inputGroup">
+        <div className="row mt-3">
+          <div className="col  d-flex  ">
+            <img src={searchIcon} alt="search" className="me-3 tabletImages" />
+            <input
+              type="text"
+              name="search"
+              id="search"
+              className=""
+              placeholder="Filter by title..."
+            />
+          </div>
+          <div className="col locationInput d-flex">
+            <img
+              src={locationIcon}
+              alt="location"
+              className="me-3 tabletImages"
+            />
+            <input
+              type="text"
+              name="location"
+              id="location"
+              className=""
+              placeholder="Filter by location..."
+            />
+          </div>
+          <div className="col  d-flex  m-0">
+            <input
+              type="checkbox"
+              name="fulltime"
+              id="fulltime"
+              className="my-auto"
+            />
+            <span className="my-auto role mx-2">Full Time</span>
+            <Button buttonName="Search" />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
