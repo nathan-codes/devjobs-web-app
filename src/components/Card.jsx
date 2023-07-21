@@ -1,15 +1,23 @@
 import "./Card.css";
 
-function Card() {
+
+function Card({ jobData }) {
   return (
     <div className="card Card">
-      <span className="companylogo">
-        <img src="..." className="" alt="" />
+      <span
+        className="companylogo d-flex flex-column align-items-center justify-content-center"
+        style={{ backgroundColor: jobData.logoBackground }}
+      >
+        <img
+          src={jobData.logo}
+          className="d-inline-block "
+          alt=""
+        />
       </span>
 
       <div className="card-body">
         <p className="posted-time">
-          <span>5h ago</span>
+          <span>{jobData.postedAt}</span>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -21,14 +29,14 @@ function Card() {
             <circle cx="2" cy="2" r="2" fill="#6E8098" />
           </svg>
 
-          <span>Full Time</span>
+          <span>{jobData.contract}</span>
         </p>
 
-        <p className="job-role ">Senior Software Engineer</p>
-        <p className="company-name ">Scoot</p>
+        <p className="job-role ">{jobData.position}</p>
+        <p className="company-name ">{jobData.company}</p>
 
         <a href="#" className="location-text">
-          United Kingdom
+          {jobData.location}
         </a>
       </div>
     </div>

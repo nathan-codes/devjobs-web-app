@@ -1,10 +1,15 @@
 import "./searchInput.css";
-// import filterIcon from "../assets/mobile/icon-filter.svg";
 import searchIcon from "../assets/desktop/icon-search.svg";
 import locationIcon from "../assets/desktop/icon-location.svg";
 import Button from "./Button";
 
-function SearchInput() {
+
+function SearchInput({ onSearch }) {
+  const UpdateForm = (evt) => {
+    const searchValue = evt.target.value;
+    onSearch(searchValue);
+  };
+
   return (
     <>
       <div className="inputGroup">
@@ -14,6 +19,7 @@ function SearchInput() {
           id="search"
           className="searchInput"
           placeholder="Filter by title..."
+          onChange={UpdateForm}
         />
         <span className="searchButtons my-auto">
           <button className="btn filter-button me-2">
@@ -48,6 +54,7 @@ function SearchInput() {
               id="search"
               className=""
               placeholder="Filter by title..."
+              onChange={UpdateForm}
             />
           </div>
           <div className="col locationInput d-flex justify-content-center">

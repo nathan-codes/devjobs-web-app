@@ -2,14 +2,11 @@ import Navbar from "./Navbar";
 import "./Header.css";
 import SearchInput from "./searchInput";
 
-function Header() {
+function Header({ onSearch }) {
   return (
     <header className="Header">
-          <Navbar />
-          <SearchInput />
-          
-          
-      
+      <Navbar />
+      <SearchInput onSearch={onSearch} />
     </header>
   );
 }
