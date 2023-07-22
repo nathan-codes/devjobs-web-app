@@ -69,6 +69,7 @@ function SearchInput({ onSearch }) {
               id="location"
               className=""
               placeholder="Filter by location..."
+              onChange={UpdateForm}
             />
           </div>
           <div className="col  d-flex   justify-content-center">
